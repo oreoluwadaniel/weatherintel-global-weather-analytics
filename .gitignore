@@ -1,0 +1,7 @@
+venv/
+weatherintel-project/
+__pycache__/
+*.pyc
+*.db
+.ipynb_checkpoints/
+.DS_Store

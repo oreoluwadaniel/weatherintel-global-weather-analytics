@@ -1,0 +1,11 @@
+element,element_name,unit
+TMAX,Maximum temperature,deg C
+TMIN,Minimum temperature,deg C
+TAVG,Average temperature,deg C
+PRCP,Precipitation,mm
+SNOW,Snowfall,mm
+SNWD,Snow depth,mm
+AWND,Average daily wind speed,m/s
+WSFG,Peak wind gust speed,m/s
+WDFG,Peak gust direction,degrees
+TSUN,Daily total sunshine,minutes

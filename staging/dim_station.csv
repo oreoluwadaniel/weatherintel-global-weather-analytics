@@ -1,0 +1,9 @@
+station_id,station_name,country_code,country,latitude,longitude,elevation_m,is_gsn,wmo_id,climate_zone
+AU000005901,Wien,AU,Austria,48.2331,16.35,199.0,1,11035,Humid continental
+CA003050520,Banff,CA,Canada,51.1833,-115.5667,1384.0,0,71122,Subarctic mountain
+FMW00040308,Yap Island Wso Ap,FM,Micronesia,9.4833,138.0833,13.4,1,91490,Tropical rainforest
+GM000010962,Hohenpeissenberg,GM,Germany,47.8017,11.0117,977.0,1,10962,Temperate mountain
+ITE00100554,Milan,IT,Italy,45.4717,9.1892,150.0,0,,Humid subtropical
+MI000067693,Chileka,MI,Malawi,-15.683,34.967,767.0,1,67693,Tropical savanna
+RQW00011641,San Juan L M Marin Ap,RQ,Puerto Rico (US),18.4325,-66.0108,2.7,1,78526,Tropical monsoon
+USC00168923,Tallulah,US,United States,32.3994,-91.1842,25.9,0,,Humid subtropical
