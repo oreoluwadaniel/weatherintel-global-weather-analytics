@@ -1,6 +1,6 @@
 # Database distribution
 
-This repository ships the raw NOAA source files (`raw/data/`) and the parsed, staged CSVs (`staging/`), but not a built database file. The warehouse is PostgreSQL, built locally from those staging files — there's no single portable database file to distribute.
+This repository ships the raw NOAA source files (`raw/data/`) and the parsed, staged CSVs (`staging/`), but not a built database file. The warehouse is PostgreSQL, built locally from those staging files. There's no single portable database file to distribute.
 
 Build it locally with:
 
