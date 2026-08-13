@@ -1,9 +1,3 @@
--- ============================================================
--- 03_quality_audit.sql  (Milestone 4: the data quality audit)
--- Run these ONE AT A TIME and read each result before moving on.
--- A senior analyst audits before analyzing. Always.
--- ============================================================
-
 -- AUDIT 1: What did NOAA's own quality assurance reject, and why?
 -- qflag meanings: I=internal consistency fail, X=bounds fail, O=climatological
 -- outlier, S=spatial inconsistency, N=naught check, G=gap check, D=duplicate check
