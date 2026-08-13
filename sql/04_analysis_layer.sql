@@ -1,10 +1,3 @@
--- ============================================================
--- 04_analysis_layer.sql  (Milestone 5: the SQL analysis layer)
--- Views + window functions. This layer is what analysts, models,
--- and Power BI consume. Run the whole file, then explore each view.
--- Run:  psql -d weatherintel -f sql/04_analysis_layer.sql
--- ============================================================
-
 -- VIEW 1: The everything-joined daily view (the analyst's front door)
 CREATE OR REPLACE VIEW vw_daily_weather AS
 SELECT f.obs_date, d.year, d.month, d.month_name, d.season_nh,
@@ -57,15 +50,7 @@ SELECT station_id, obs_date, tmax,
 FROM fact_daily_weather
 WHERE tmax IS NOT NULL;
 
--- VIEW 5: Consecutive rainy-day streaks (the classic gaps-and-islands
--- pattern; interviewers love it).
--- LESSON LEARNED IN TESTING: the textbook version of this pattern uses
--- ROW_NUMBER over all rows, which silently treats missing DATES as
--- consecutive. Hohenpeissenberg produced an impossible "484-day streak"
--- spanning 1868 to 1879 that way. The fix: anchor on real calendar dates.
--- obs_date minus a per-station rainy-day row number is CONSTANT only while
--- rainy days fall on strictly consecutive calendar dates. Any missing date
--- breaks the streak, which is the conservative, honest behaviour.
+-- VIEW 5: Consecutive rainy-day streaks
 CREATE OR REPLACE VIEW vw_rain_streaks AS
 WITH rainy AS (
     SELECT station_id, obs_date,
