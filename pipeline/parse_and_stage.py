@@ -1,15 +1,3 @@
-"""
-parse_and_stage.py  (Milestone 2: ingestion)
-
-Reads raw NOAA GHCN-Daily station files from raw/data/ and produces clean,
-load-ready staging files in staging/.
-
-Handles BOTH raw formats automatically:
-  *.dly  : NOAA's fixed-width archive format (bundled with this project)
-  *.csv  : NOAA's by_station CSV format (what refresh_ghcn_noaa.py downloads)
-
-Run:  python pipeline/parse_and_stage.py
-"""
 import os
 import calendar
 import pandas as pd
@@ -17,7 +5,6 @@ import pandas as pd
 RAW_DIR = "raw/data"
 STAGE_DIR = "staging"
 
-# The 10 elements our warehouse tracks (see Dim_Element)
 ELEMENTS = {
     "TMAX": ("Maximum temperature", "deg C"), "TMIN": ("Minimum temperature", "deg C"),
     "TAVG": ("Average temperature", "deg C"), "PRCP": ("Precipitation", "mm"),
