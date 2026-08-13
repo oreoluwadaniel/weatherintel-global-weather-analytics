@@ -1,15 +1,3 @@
-"""
-refresh_ghcn_noaa.py
-RUN THIS ON YOUR LOCAL MACHINE (not needed in the sandbox).
-
-Downloads the latest full history for each project station directly from
-NOAA's official GHCN-Daily mirror on AWS Open Data, then re-runs the parser.
-This is what makes the project genuinely refreshable: NOAA updates these
-files daily, so re-running this script brings the database current.
-
-No API key required. Data source: https://registry.opendata.aws/noaa-ghcn/
-Requires: pip install requests pandas pyarrow
-"""
 import os
 import requests
 
