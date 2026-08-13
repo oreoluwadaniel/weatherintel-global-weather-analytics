@@ -1,12 +1,10 @@
 """
-09_sarima.py  (Milestone 9: Classical Time Series Modeling)
-
 SARIMA answers a DIFFERENT business question than Milestone 8.
   Milestone 8 : "what is tomorrow's high?"        (short-range, feature-driven)
   Milestone 9 : "what will monthly temperatures do over the next 2 years?"
                 (seasonal planning: energy demand, crop windows, insurance)
 
-We model Vienna's MONTHLY mean tmax, not daily values. Daily SARIMA with a
+Model Vienna's MONTHLY mean tmax, not daily values. Daily SARIMA with a
 365-day season is computationally miserable and statistically fragile;
 monthly with a 12-period season is the professional norm for climate-scale
 questions. Choosing the right grain for the question IS the senior skill.
@@ -15,7 +13,6 @@ SARIMA(p,d,q)(P,D,Q,s) in plain words:
   (1,0,1)    : this month relates to last month plus a moving-average error
   (1,1,1,12) : seasonal difference (subtract same month last year) removes
                the annual cycle, then model what remains
-Run: python pipeline/09_sarima.py
 """
 import warnings
 import pandas as pd
@@ -28,7 +25,6 @@ from sklearn.metrics import mean_absolute_error
 
 warnings.filterwarnings("ignore")
 
-# >>> EDIT with your credentials <<<
 DB_URL = "postgresql://postgres:postgres@localhost:5432/weatherintel"
 
 eng = create_engine(DB_URL)
