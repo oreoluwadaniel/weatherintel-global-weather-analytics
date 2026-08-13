@@ -1,9 +1,4 @@
 """
-SARIMA answers a DIFFERENT business question than Milestone 8.
-  Milestone 8 : "what is tomorrow's high?"        (short-range, feature-driven)
-  Milestone 9 : "what will monthly temperatures do over the next 2 years?"
-                (seasonal planning: energy demand, crop windows, insurance)
-
 Model Vienna's MONTHLY mean tmax, not daily values. Daily SARIMA with a
 365-day season is computationally miserable and statistically fragile;
 monthly with a 12-period season is the professional norm for climate-scale
