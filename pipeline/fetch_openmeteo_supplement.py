@@ -1,13 +1,9 @@
 """
 fetch_openmeteo_supplement.py
-RUN THIS ON YOUR LOCAL MACHINE.
 
 Pulls the variables GHCN-Daily lacks (solar radiation, cloud cover, humidity,
 dew point, pressure, wind gusts at hourly resolution) from the Open-Meteo
 Historical Weather API, which serves ECMWF ERA5 reanalysis data.
-
-Free, no API key. Docs: https://open-meteo.com/en/docs/historical-weather-api
-Requires: pip install requests pandas
 
 These land in a supplementary fact table (Fact_ReanalysisDaily) so that raw
 station observations and model reanalysis are never mixed silently. Being able
