@@ -1,6 +1,4 @@
 """
-07_features.py  (Milestone 7: Feature Engineering)
-
 Builds the supervised learning dataset for our prediction target:
     TOMORROW'S maximum temperature in Vienna.
 
@@ -10,14 +8,12 @@ never tomorrow. Violating this is called leakage and it is the number one
 way portfolio ML projects embarrass their authors in interviews.
 
 Output: outputs/model_dataset_vienna.csv
-Run: python pipeline/07_features.py
 """
 import os
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine
 
-# >>> EDIT with your credentials <<<
 DB_URL = "postgresql://postgres:postgres@localhost:5432/weatherintel"
 
 eng = create_engine(DB_URL)
@@ -29,9 +25,6 @@ v = pd.read_sql("""
 """, eng, parse_dates=["obs_date"]).set_index("obs_date")
 print(f"Vienna raw: {len(v):,} days, {v.index.min().date()} to {v.index.max().date()}")
 
-# Reindex to a complete calendar so that lag/rolling operations respect real
-# time. Without this, a 3-day gap would make "yesterday" silently mean
-# "4 days ago" and every lag feature would be a lie.
 v = v.reindex(pd.date_range(v.index.min(), v.index.max(), freq="D"))
 print(f"After calendar reindex: {len(v):,} rows ({v.tmax.isna().sum()} missing days now explicit)")
 
