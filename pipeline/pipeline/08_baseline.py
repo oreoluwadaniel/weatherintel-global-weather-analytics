@@ -1,6 +1,4 @@
 """
-08_baseline.py  (Milestone 8: Baselines)
-
 Trains the models every serious forecast must beat BEFORE any fancy ML:
   1. Persistence : tomorrow = today            (the meteorologist's null model)
   2. Climatology : tomorrow = day-of-year mean (the "average year" model)
@@ -10,7 +8,6 @@ Split is CHRONOLOGICAL: train on 1960-2009, test on 2010-2018. Never shuffle
 time series. Shuffling lets the model peek at the future's neighbours and
 produces glorious fake accuracy that dies in production.
 
-Run: python pipeline/08_baseline.py   (after 07_features.py)
 """
 import pandas as pd
 import numpy as np
