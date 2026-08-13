@@ -1,6 +1,5 @@
 -- ============================================================
--- 01_schema.sql  (Milestone 3: the star schema)
--- Run:  psql -d weatherintel -f sql/01_schema.sql
+-- 01_schema.sql 
 -- ============================================================
 
 DROP VIEW  IF EXISTS vw_monthly_summary;
