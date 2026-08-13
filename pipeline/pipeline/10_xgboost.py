@@ -1,16 +1,3 @@
-"""
-10_xgboost.py  (Milestone 10: Gradient Boosting + Final Evaluation)
-
-XGBoost on the Milestone 7 feature set, evaluated on the SAME chronological
-split as the baselines so the comparison is fair. Then the final scoreboard.
-
-Why XGBoost here: it learns interactions and non-linearities automatically
-(e.g. "a big temp_range in June means clear skies means hot tomorrow, but
-the same range in January means something different"). Linear regression
-cannot express that without hand-built interaction terms.
-
-Run: python pipeline/10_xgboost.py   (after 07 and 08)
-"""
 import pandas as pd
 import matplotlib
 matplotlib.use("Agg")
