@@ -1,5 +1,4 @@
 """
-06_eda.py  (Milestone 6: Exploratory Data Analysis)
 
 Pulls curated data from PostgreSQL and produces the five core EDA artefacts
 every forecasting project needs BEFORE any model is trained:
@@ -9,7 +8,7 @@ every forecasting project needs BEFORE any model is trained:
   4. Anomalies     : days deviating > 3 sigma from their day-of-year normal
   5. Correlations  : variable relationships at the model station (Vienna)
 
-All charts are saved to outputs/ as PNG. Run: python pipeline/06_eda.py
+All charts are saved to outputs/ as PNG.
 """
 import os
 import pandas as pd
@@ -18,7 +17,6 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
 
-# >>> EDIT with your credentials <<<
 DB_URL = "postgresql://postgres:postgres@localhost:5432/weatherintel"
 
 os.makedirs("outputs", exist_ok=True)
